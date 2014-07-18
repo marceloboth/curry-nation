@@ -1,0 +1,18 @@
+default: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: marcelo
+  password: 123456
+
+development:
+  <<: *defaults
+  database: curry-nation_development
+
+test: &test
+  <<: *defaults
+  database: curry-nation_test
+
+production:
+  <<: *defaults
+  database: curry-nation_production
